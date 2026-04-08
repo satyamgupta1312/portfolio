@@ -311,6 +311,26 @@ button { cursor: none; }
     transform: translateY(-2px);
 }
 
+.sidebar-cv-btn {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    background: rgba(124, 92, 252, 0.1);
+    border: 1px solid rgba(124, 92, 252, 0.25);
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent) !important;
+    transition: var(--transition);
+}
+
+.sidebar-cv-btn:hover {
+    background: var(--accent) !important;
+    color: #fff !important;
+    box-shadow: 0 0 20px rgba(124, 92, 252, 0.4);
+    transform: translateY(-2px) scale(1.05);
+}
+
 /* Mobile Nav Toggle */
 .mobile-nav-toggle {
     display: none;
