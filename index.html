@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satyam Gupta | Product Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Photo Expand Overlay -->
+    <div class="photo-overlay" id="photoOverlay">
+        <div class="photo-overlay-bg"></div>
+        <button class="photo-overlay-close" id="photoClose"><i class="fas fa-xmark"></i></button>
+        <img src="satyam.jpg" alt="Satyam Gupta">
+        <div class="photo-overlay-info">
+            <p class="photo-overlay-name">SATYAM GUPTA</p>
+            <p class="photo-overlay-role">Product Engineer</p>
+        </div>
+    </div>
+
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Sidebar Nav -->
+    <nav class="sidebar" id="sidebar">
+        <a href="#hero" class="sidebar-logo">
+            <img src="satyam.jpg" alt="SG" class="sidebar-avatar">
+        </a>
+        <ul class="sidebar-links" id="navLinks">
+            <li><a href="#about"><span class="sidebar-dot"></span><span class="sidebar-text">About</span></a></li>
+            <li><a href="#skills"><span class="sidebar-dot"></span><span class="sidebar-text">Skills</span></a></li>
+            <li><a href="#projects"><span class="sidebar-dot"></span><span class="sidebar-text">Projects</span></a></li>
+            <li><a href="#experience"><span class="sidebar-dot"></span><span class="sidebar-text">Experience</span></a></li>
+            <li><a href="#education"><span class="sidebar-dot"></span><span class="sidebar-text">Education</span></a></li>
+            <li><a href="#contact"><span class="sidebar-dot"></span><span class="sidebar-text">Contact</span></a></li>
+        </ul>
+        <div class="sidebar-bottom">
+            <a href="https://github.com/satyamgupta546" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/satyam-gupta-a0737a1a5/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </nav>
+
+    <!-- Mobile Nav Toggle -->
+    <button class="mobile-nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Hero Section - Mouse Parallax -->
+    <section class="hero" id="hero">
+        <!-- Parallax Layers -->
+        <div class="parallax-scene" id="parallaxScene">
+            <!-- Layer 0 - Deep Background Stars -->
+            <div class="parallax-layer" data-depth="0.03">
+                <div class="stars-field">
+                    <div class="star" style="top:10%;left:15%;--delay:0s;--size:2px"></div>
+                    <div class="star" style="top:20%;left:80%;--delay:1.2s;--size:3px"></div>
+                    <div class="star" style="top:60%;left:25%;--delay:0.5s;--size:2px"></div>
+                    <div class="star" style="top:30%;left:60%;--delay:2s;--size:1px"></div>
+                    <div class="star" style="top:80%;left:70%;--delay:0.8s;--size:2px"></div>
+                    <div class="star" style="top:45%;left:90%;--delay:1.5s;--size:3px"></div>
+                    <div class="star" style="top:70%;left:10%;--delay:0.3s;--size:1px"></div>
+                    <div class="star" style="top:15%;left:45%;--delay:1.8s;--size:2px"></div>
+                    <div class="star" style="top:85%;left:40%;--delay:2.5s;--size:1px"></div>
+                    <div class="star" style="top:50%;left:55%;--delay:0.7s;--size:2px"></div>
+                    <div class="star" style="top:5%;left:35%;--delay:1s;--size:3px"></div>
+                    <div class="star" style="top:90%;left:85%;--delay:1.3s;--size:1px"></div>
+                </div>
+            </div>
+
+            <!-- Layer 1 - Far Background Orbs -->
+            <div class="parallax-layer" data-depth="0.06">
+                <div class="orb orb-1"></div>
+                <div class="orb orb-2"></div>
+            </div>
+
+            <!-- Layer 2 - Mid Background Gradient Mesh -->
+            <div class="parallax-layer" data-depth="0.12">
+                <div class="gradient-mesh mesh-1"></div>
+                <div class="gradient-mesh mesh-2"></div>
+            </div>
+
+            <!-- Layer 3 - Floating Geometric Shapes -->
+            <div class="parallax-layer" data-depth="0.2">
+                <div class="geo-shape ring ring-1"></div>
+                <div class="geo-shape ring ring-2"></div>
+                <div class="geo-shape diamond diamond-1"></div>
+            </div>
+
+            <!-- Layer 4 - Main Text (sits between layers) -->
+            <div class="parallax-layer" data-depth="0.08">
+                <div class="hero-content">
+                    <div class="hero-label">
+                        <span class="line"></span>
+                        <span>PRODUCT ENGINEER</span>
+                        <span class="line"></span>
+                    </div>
+                    <h1 class="hero-name">
+                        <span class="name-line" data-text="SATYAM">SATYAM</span>
+                        <span class="name-line name-outline" data-text="GUPTA">GUPTA</span>
+                    </h1>
+                    <div class="hero-tech-scroll">
+                <div class="hero-tech-track">
+                    <span>Python</span><span class="tech-dot"></span>
+                    <span>JavaScript</span><span class="tech-dot"></span>
+                    <span>TypeScript</span><span class="tech-dot"></span>
+                    <span>SQL</span><span class="tech-dot"></span>
+                    <span>React</span><span class="tech-dot"></span>
+                    <span>NestJS</span><span class="tech-dot"></span>
+                    <span>FastAPI</span><span class="tech-dot"></span>
+                    <span>Kotlin</span><span class="tech-dot"></span>
+                    <span>Express</span><span class="tech-dot"></span>
+                    <span>Flask</span><span class="tech-dot"></span>
+                    <span>Apps Script</span><span class="tech-dot"></span>
+                    <span>Docker</span><span class="tech-dot"></span>
+                    <span>Supabase</span><span class="tech-dot"></span>
+                    <span>Tailwind CSS</span><span class="tech-dot"></span>
+                    <!-- Duplicate for seamless loop -->
+                    <span>Python</span><span class="tech-dot"></span>
+                    <span>JavaScript</span><span class="tech-dot"></span>
+                    <span>TypeScript</span><span class="tech-dot"></span>
+                    <span>SQL</span><span class="tech-dot"></span>
+                    <span>React</span><span class="tech-dot"></span>
+                    <span>NestJS</span><span class="tech-dot"></span>
+                    <span>FastAPI</span><span class="tech-dot"></span>
+                    <span>Kotlin</span><span class="tech-dot"></span>
+                    <span>Express</span><span class="tech-dot"></span>
+                    <span>Flask</span><span class="tech-dot"></span>
+                    <span>Apps Script</span><span class="tech-dot"></span>
+                    <span>Docker</span><span class="tech-dot"></span>
+                    <span>Supabase</span><span class="tech-dot"></span>
+                    <span>Tailwind CSS</span><span class="tech-dot"></span>
+                </div>
+            </div>
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-glow">
+                            <span>View My Work</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-ghost">
+                            <span>Get in Touch</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Layer 5 - Foreground Particles -->
+            <div class="parallax-layer" data-depth="0.35">
+                <div class="geo-shape dot dot-1"></div>
+                <div class="geo-shape dot dot-2"></div>
+                <div class="geo-shape dot dot-3"></div>
+                <div class="geo-shape cross cross-1"></div>
+                <div class="geo-shape line-shape line-1"></div>
+            </div>
+
+            <!-- Layer 6 - Closest Foreground -->
+            <div class="parallax-layer" data-depth="0.5">
+                <div class="fog fog-left"></div>
+                <div class="fog fog-right"></div>
+            </div>
+        </div>
+
+        <!-- Social Strip (visible only on desktop alongside sidebar) -->
+        <div class="hero-social-strip">
+            <a href="mailto:satyamgupta1312@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="tel:+918987725306"><i class="fas fa-phone"></i></a>
+            <div class="social-line"></div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-cue">
+            <div class="scroll-line"></div>
+            <span>SCROLL</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header" data-aos>
+                <span class="section-number">01</span>
+                <h2 class="section-title">About Me</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="about-grid" data-aos>
+                <div class="about-text">
+                    <p class="about-lead">I'm a <span class="highlight">Product Engineer</span> who builds full-stack products, automates operations, and solves real business problems.</p>
+                    <p>At <strong>The Fleets Labs (Apna Mart)</strong>, I've built a <strong>drag-and-drop widget CMS</strong> for the consumer app homepage, engineered a complete <strong>on-demand ironing service platform</strong> as a new business model, automated <strong>marketing data pipelines</strong> with CleverTap & Singular APIs, built a <strong>Slack bot for geofence management</strong>, and created a <strong>multi-platform price benchmarking tool</strong> that scrapes Blinkit, Zepto, Swiggy & more.</p>
+                    <p>I also built a <strong>real-time GPS tracking system</strong> (Android app + admin dashboard) and various automation tools. Rapidly promoted through 6+ roles — from store operations to product engineering.</p>
+                    <div class="about-tech-stack">
+                        <span class="tech-chip"><i class="fab fa-python"></i> Python</span>
+                        <span class="tech-chip"><i class="fab fa-js"></i> JavaScript</span>
+                        <span class="tech-chip"><i class="fas fa-code"></i> TypeScript</span>
+                        <span class="tech-chip"><i class="fas fa-database"></i> SQL</span>
+                        <span class="tech-chip"><i class="fab fa-react"></i> React</span>
+                        <span class="tech-chip"><i class="fas fa-server"></i> NestJS</span>
+                        <span class="tech-chip"><i class="fas fa-bolt"></i> FastAPI</span>
+                        <span class="tech-chip"><i class="fab fa-android"></i> Kotlin</span>
+                        <span class="tech-chip"><i class="fab fa-google"></i> Apps Script</span>
+                        <span class="tech-chip"><i class="fas fa-flask-vial"></i> Flask</span>
+                        <span class="tech-chip"><i class="fab fa-docker"></i> Docker</span>
+                        <span class="tech-chip"><i class="fas fa-wind"></i> Tailwind CSS</span>
+                    </div>
+                </div>
+                <div class="about-metrics">
+                    <div class="metric">
+                        <div class="metric-value" data-count="4">0</div>
+                        <div class="metric-label">Years of<br>Experience</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value" data-count="7">0</div>
+                        <div class="metric-label">Roles<br>Held</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value" data-count="6">0</div>
+                        <div class="metric-label">Rapid<br>Promotions</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section section-dark" id="skills">
+        <div class="container">
+            <div class="section-header" data-aos>
+                <span class="section-number">02</span>
+                <h2 class="section-title">Skills & Tools</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="skills-orbit" data-aos>
+                <div class="skills-flex">
+                    <div class="skill-pill" data-tilt>
+                        <i class="fas fa-database"></i>
+                        <div>
+                            <h3>Data Analysis</h3>
+                            <span>SQL &bull; Excel (Advanced) &bull; Mixpanel</span>
+                        </div>
+                    </div>
+                    <div class="skill-pill" data-tilt>
+                        <i class="fas fa-code"></i>
+                        <div>
+                            <h3>Development & Scripting</h3>
+                            <span>Python &bull; TypeScript &bull; JavaScript &bull; Kotlin &bull; Apps Script &bull; APIs</span>
+                        </div>
+                    </div>
+                    <div class="skill-pill" data-tilt>
+                        <i class="fas fa-pen-ruler"></i>
+                        <div>
+                            <h3>Design & Tools</h3>
+                            <span>Photoshop &bull; Figma &bull; AI Prompting</span>
+                        </div>
+                    </div>
+                    <div class="skill-pill" data-tilt>
+                        <i class="fas fa-vial"></i>
+                        <div>
+                            <h3>QA & Testing</h3>
+                            <span>UAT &bull; Software Quality Assurance</span>
+                        </div>
+                    </div>
+                    <div class="skill-pill" data-tilt>
+                        <i class="fas fa-brain"></i>
+                        <div>
+                            <h3>AI & Prompt Engineering</h3>
+                            <span>ChatGPT &bull; Claude &bull; AI-Assisted Development &bull; Prompt Design</span>
+                        </div>
+                    </div>
+                    <div class="skill-pill" data-tilt>
+                        <i class="fas fa-globe"></i>
+                        <div>
+                            <h3>Languages</h3>
+                            <span>English &bull; Hindi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-header" data-aos>
+                <span class="section-number">03</span>
+                <h2 class="section-title">Projects</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="projects-note" data-aos>
+                <i class="fas fa-wand-magic-sparkles"></i>
+                <p>Code is AI-assisted — the logic, product thinking, architecture, and user flows are entirely mine.</p>
+            </div>
+            <div class="projects-masonry" data-aos>
+                <div class="project-card project-featured" data-tilt>
+                    <div class="project-glow"></div>
+                    <div class="project-badge">Apna Mart — Consumer App</div>
+                    <div class="project-icon-wrap"><i class="fas fa-puzzle-piece"></i></div>
+                    <h3>Optimus — Widget CMS for App Homepage</h3>
+                    <p>Full-stack <strong>WYSIWYG drag-and-drop CMS</strong> that powers the Apna Mart consumer app homepage. The old system was tricky and painful — rebuilt it from scratch with a <strong>config-driven widget architecture</strong>. Makers drag widgets (Product Rails, Collection Banners, Mastheads) inside a <strong>phone emulator preview</strong>, configure them visually, and submit through a <strong>Maker-Checker approval workflow</strong>. On approval, widgets deploy directly to the production Django backend. Features undo/redo, version history, product catalog integration, and multi-environment (PROD/UAT) support.</p>
+                    <div class="project-tags">
+                        <span>React 19</span>
+                        <span>Express</span>
+                        <span>Supabase</span>
+                        <span>@dnd-kit</span>
+                        <span>Tailwind CSS</span>
+                        <span>Vercel</span>
+                    </div>
+                    <a href="https://github.com/satyamgupta546/optimus" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+                </div>
+                <div class="project-card" data-tilt>
+                    <div class="project-glow"></div>
+                    <div class="project-badge">Apna Mart — New Business Model</div>
+                    <div class="project-icon-wrap"><i class="fas fa-shirt"></i></div>
+                    <h3>istrE3 — On-Demand Ironing Service</h3>
+                    <p>A new business model I'm building for Apna Mart — full-stack platform for on-demand clothes ironing. 20+ state order machine, QR bag scanning, rider assignment, hub zones, and real-time tracking.</p>
+                    <div class="project-tags">
+                        <span>NestJS</span>
+                        <span>React</span>
+                        <span>PostgreSQL</span>
+                        <span>Redis</span>
+                        <span>Docker</span>
+                    </div>
+                    <a href="https://github.com/satyamgupta546/istrE3" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+                </div>
+                <div class="project-card" data-tilt>
+                    <div class="project-glow"></div>
+                    <div class="project-badge">Scraping / Data</div>
+                    <div class="project-icon-wrap"><i class="fas fa-tags"></i></div>
+                    <h3>Price Benchmark</h3>
+                    <p>Quick commerce price comparison across Blinkit, Zepto, Swiggy Instamart, JioMart & Flipkart Minutes. Scrapes 1000s of products concurrently with CSV export.</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>FastAPI</span>
+                        <span>Playwright</span>
+                        <span>React</span>
+                    </div>
+                    <a href="https://github.com/satyamgupta546/Price-benchmark" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+                </div>
+                <div class="project-card" data-tilt>
+                    <div class="project-glow"></div>
+                    <div class="project-badge">Android</div>
+                    <div class="project-icon-wrap"><i class="fas fa-location-dot"></i></div>
+                    <h3>TrackMate — Location Tracker</h3>
+                    <p>Real-time GPS tracking Android app with background foreground service, trip history, and OpenStreetMap integration. No Google Maps dependency.</p>
+                    <div class="project-tags">
+                        <span>Kotlin</span>
+                        <span>Jetpack Compose</span>
+                        <span>Supabase</span>
+                    </div>
+                    <a href="https://github.com/satyamgupta546/trackpro-android-app" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+                </div>
+                <div class="project-card" data-tilt>
+                    <div class="project-glow"></div>
+                    <div class="project-badge">Admin Panel</div>
+                    <div class="project-icon-wrap"><i class="fas fa-map-location-dot"></i></div>
+                    <h3>TrackPro Admin Dashboard</h3>
+                    <p>Web admin dashboard to monitor tracked users, view location history on Leaflet maps, manage geofence zones, and review trip logs with auto-refresh.</p>
+                    <div class="project-tags">
+                        <span>React 19</span>
+                        <span>Leaflet</span>
+                        <span>Supabase</span>
+                        <span>Recharts</span>
+                    </div>
+                    <a href="https://github.com/satyamgupta546/trackpro-admin-panel" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+                </div>
+                <div class="project-card" data-tilt>
+                    <div class="project-glow"></div>
+                    <div class="project-badge">Apna Mart</div>
+                    <div class="project-icon-wrap"><i class="fab fa-slack"></i></div>
+                    <h3>Geofence Bot — Slack Automation</h3>
+                    <p>Slack bot that automates geofence updates for stores. Parses WKT geometry, shows approval workflow with map screenshots, and calls ApnaMart API on approval.</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>Slack SDK</span>
+                        <span>Shapely</span>
+                    </div>
+                    <a href="https://github.com/satyamgupta546/geofence-bot" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+                </div>
+                <div class="project-card" data-tilt>
+                    <div class="project-glow"></div>
+                    <div class="project-badge">Fun</div>
+                    <div class="project-icon-wrap"><i class="fas fa-heart"></i></div>
+                    <h3>Your Yes Portal</h3>
+                    <p>Romantic proposal web app with multi-stage flow, evasive "No" button, confetti celebration, love letter, timeline, and AI Cupid feature.</p>
+                    <div class="project-tags">
+                        <span>TypeScript</span>
+                        <span>React</span>
+                        <span>Framer Motion</span>
+                        <span>Supabase</span>
+                    </div>
+                    <a href="https://github.com/satyamgupta546/your-yes-portal" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section section-dark" id="experience">
+        <div class="container">
+            <div class="section-header" data-aos>
+                <span class="section-number">04</span>
+                <h2 class="section-title">Experience</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="exp-company" data-aos>
+                <h3>The Fleets Labs Technologies Pvt. Ltd.</h3>
+                <p>Rapidly promoted through operations to product, automation, and engineering roles.</p>
+            </div>
+            <div class="timeline" data-aos>
+                <div class="timeline-track"></div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot active"></div>
+                    <div class="timeline-card" data-tilt>
+                        <div class="timeline-date">Present</div>
+                        <h3>Product Engineer</h3>
+                        <ul>
+                            <li>Building and engineering product solutions, driving technical implementation end-to-end.</li>
+                            <li>Collaborating cross-functionally to design, develop, and ship product features.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card" data-tilt>
+                        <div class="timeline-date">Sep 2025</div>
+                        <h3>Automation Product Manager</h3>
+                        <ul>
+                            <li>Spearheaded automation using JavaScript (Apps Script) and Python to reduce manual tasks.</li>
+                            <li>Automated data flows between spreadsheets and external APIs (CleverTap, Singular).</li>
+                            <li>Built automated dashboards for product KPIs and engagement metrics.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card" data-tilt>
+                        <div class="timeline-date">Feb 2024 – Aug 2025</div>
+                        <h3>Product Ops</h3>
+                        <ul>
+                            <li>Bridged support and product teams using Mixpanel for behavior analysis.</li>
+                            <li>Identified bugs and feature requests, prioritizing with SQL-based data validation.</li>
+                            <li>Optimized workflows for faster ticket resolution and smoother launches.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card" data-tilt>
+                        <div class="timeline-date">Feb 2023 – Jan 2024</div>
+                        <h3>Tech Support</h3>
+                        <ul>
+                            <li>Resolved complex technical issues ensuring high customer satisfaction.</li>
+                            <li>Collaborated with QA to document issues and assist in UAT.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card" data-tilt>
+                        <div class="timeline-date">Jun 2022 – Feb 2023</div>
+                        <h3>GRN & Audit Lead / SLA Manager</h3>
+                        <ul>
+                            <li>Managed GRN process and led Audit Team to 100% compliance.</li>
+                            <li>Managed SLA for online orders, ensuring on-time delivery metrics.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card" data-tilt>
+                        <div class="timeline-date">Mar 2022 – Jun 2022</div>
+                        <h3>Trainer / Store Manager</h3>
+                        <ul>
+                            <li>Trained new staff on operations and store management software.</li>
+                            <li>Oversaw daily store operations and customer service standards.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section" id="education">
+        <div class="container">
+            <div class="section-header" data-aos>
+                <span class="section-number">05</span>
+                <h2 class="section-title">Education</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="edu-grid" data-aos>
+                <div class="edu-card" data-tilt>
+                    <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Bachelor of Commerce</h3>
+                    <p>IGNOU</p>
+                    <span class="edu-year">Pursuing</span>
+                </div>
+                <div class="edu-card" data-tilt>
+                    <div class="edu-icon"><i class="fas fa-school"></i></div>
+                    <h3>Intermediate (12th)</h3>
+                    <p>Gossner College, Ranchi</p>
+                    <span class="edu-year">2020</span>
+                </div>
+                <div class="edu-card" data-tilt>
+                    <div class="edu-icon"><i class="fas fa-book-open"></i></div>
+                    <h3>Matriculation (10th)</h3>
+                    <p>International Public School</p>
+                    <span class="edu-year">2018</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section section-dark" id="contact">
+        <div class="container">
+            <div class="section-header" data-aos>
+                <span class="section-number">06</span>
+                <h2 class="section-title">Let's Connect</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="contact-wrap" data-aos>
+                <p class="contact-lead">Have an opportunity or just want to say hello?</p>
+                <a href="mailto:satyamgupta1312@gmail.com" class="contact-email-big">satyamgupta1312@gmail.com</a>
+                <div class="contact-links">
+                    <a href="tel:+918987725306" class="contact-link">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 8987725306</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/satyam-gupta-a0737a1a5/" target="_blank" class="contact-link">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p>&copy; 2026 Satyam Gupta</p>
+            <p>Designed with purpose.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
