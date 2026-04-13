@@ -256,7 +256,7 @@ li{font-size:10.5pt;margin-bottom:3px;color:#333}
 
 <div class="project"><span class="project-title">istrE3 — On-Demand Ironing Service</span> <span class="date">(Apna Mart — New Business Model)</span><br><span class="project-desc">Full-stack platform with 20+ state order machine, QR bag scanning, rider assignment, hub zones, real-time WebSocket tracking, OTP flows.</span><br><span class="project-tech">NestJS, React, PostgreSQL, Redis, Docker, Prisma</span></div>
 
-<div class="project"><span class="project-title">Price Benchmark</span><br><span class="project-desc">Quick commerce price comparison across Blinkit, Zepto, Swiggy Instamart, JioMart & Flipkart Minutes. Concurrent scraping with CSV export.</span><br><span class="project-tech">Python, FastAPI, Playwright, React</span></div>
+<div class="project"><span class="project-title">SAM — Price Benchmark (Anakin Replacement)</span> <span class="date">(Apna Mart — Saving ₹36L/year)</span><br><span class="project-desc">In-house replacement for Anakin (₹3L/month service). Scrapes 5 quick-commerce platforms, compares 3,600+ SKUs via 4-stage matching pipeline (PDP direct, brand cascade, type/MRP cascade, manual review). Multi-city orchestration, API interception, styled Excel exports.</span><br><span class="project-tech">Python, FastAPI, Playwright, React, SSE, openpyxl</span></div>
 
 <div class="project"><span class="project-title">TrackMate + Admin Dashboard</span><br><span class="project-desc">Real-time GPS tracking Android app with background service + web admin panel with Leaflet maps, geofence zones, route history.</span><br><span class="project-tech">Kotlin, Jetpack Compose, React 19, Leaflet, Supabase</span></div>
 
