@@ -194,103 +194,151 @@ window.addEventListener('scroll', () => {
 });
 
 // ===== CV Download =====
-document.getElementById('downloadCV').addEventListener('click', (e) => {
-    e.preventDefault();
+function generateCV() {
     const cvHTML = `<!DOCTYPE html>
-<html><head><meta charset="UTF-8"><title>Satyam Gupta - CV</title>
+<html><head><meta charset="UTF-8"><title>Satyam_Gupta_Resume</title>
 <style>
+@page{margin:14mm 16mm}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Segoe UI',Arial,sans-serif;color:#1a1a2e;line-height:1.6;max-width:800px;margin:0 auto;padding:40px 48px;font-size:11.5pt}
-h1{font-size:22pt;font-weight:700;margin-bottom:2px}
-.subtitle{font-size:11pt;color:#6366f1;font-weight:600;margin-bottom:4px}
-.links{font-size:9pt;color:#555;margin-bottom:16px}
-.links a{color:#6366f1;text-decoration:none}
-.links span{margin:0 6px;color:#ccc}
-hr{border:none;border-top:2px solid #6366f1;margin:12px 0 16px}
-h2{font-size:12pt;font-weight:700;color:#6366f1;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px;margin-top:20px}
-h3{font-size:11pt;font-weight:700;margin-bottom:2px}
-.role-date{display:flex;justify-content:space-between;align-items:center}
-.date{font-size:9.5pt;color:#888;font-weight:500}
-.company{font-size:10pt;color:#555;font-style:italic;margin-bottom:6px}
-ul{padding-left:18px;margin-bottom:10px}
-li{font-size:10.5pt;margin-bottom:3px;color:#333}
-.skills-row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
-.skill-cat{font-weight:600;font-size:10pt;min-width:160px}
-.skill-val{font-size:10pt;color:#333}
-.project{margin-bottom:10px}
-.project-title{font-weight:700;font-size:10.5pt}
-.project-desc{font-size:10pt;color:#444}
-.project-tech{font-size:9pt;color:#6366f1;font-style:italic}
-.note{font-size:9pt;color:#888;font-style:italic;margin-bottom:14px}
-.edu-row{display:flex;justify-content:space-between;margin-bottom:4px}
-.edu-row span:last-child{color:#888;font-size:10pt}
-@media print{body{padding:20px 32px}h1{font-size:20pt}}
-</style></head><body>
+body{font-family:Calibri,'Segoe UI',Arial,sans-serif;color:#222;line-height:1.45;font-size:10pt;padding:0}
+a{color:#222;text-decoration:none}
+h1{font-size:18pt;font-weight:700;letter-spacing:0.5px;margin-bottom:1px}
+.title{font-size:10.5pt;font-weight:600;color:#444;margin-bottom:3px}
+.contact{font-size:8.5pt;color:#555;margin-bottom:8px}
+.contact a{color:#1a56db}
+.divider{border:none;border-top:1.5px solid #222;margin:6px 0 8px}
+h2{font-size:10pt;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;border-bottom:1px solid #ccc;padding-bottom:2px;margin:10px 0 6px;color:#222}
+.row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:1px}
+.row h3{font-size:10pt;font-weight:700}
+.row .date{font-size:8.5pt;color:#666}
+.company-line{font-size:9pt;color:#555;margin-bottom:3px}
+ul{padding-left:16px;margin:2px 0 6px}
+li{font-size:9.5pt;margin-bottom:1.5px;color:#333}
+.skills-grid{display:grid;grid-template-columns:130px 1fr;gap:2px 8px;font-size:9.5pt;margin-bottom:2px}
+.sk-label{font-weight:700;color:#222}
+.sk-value{color:#333}
+.proj{margin-bottom:5px}
+.proj-head{display:flex;justify-content:space-between;align-items:baseline}
+.proj-title{font-size:9.5pt;font-weight:700}
+.proj-co{font-size:8.5pt;color:#666}
+.proj-desc{font-size:9pt;color:#444;margin:1px 0}
+.proj-tech{font-size:8pt;color:#1a56db}
+.note{font-size:8pt;color:#888;font-style:italic;margin-bottom:5px}
+.edu-row{display:flex;justify-content:space-between;font-size:9.5pt;margin-bottom:2px}
+.interests{font-size:9pt;color:#444}
+</style>
+<script>window.onload=function(){window.print()}<\/script>
+</head><body>
 
 <h1>SATYAM GUPTA</h1>
-<p class="subtitle">Product Engineer</p>
-<p class="links">
-<a href="mailto:satyamgupta1312@gmail.com">satyamgupta1312@gmail.com</a>
-<span>|</span>+91 8987725306
-<span>|</span><a href="https://www.linkedin.com/in/satyam-gupta-a0737a1a5/">LinkedIn</a>
-<span>|</span><a href="https://satyamgupta-portfolio.vercel.app">satyamgupta-portfolio.vercel.app</a>
-<span>|</span><a href="https://github.com/satyamgupta1312">GitHub</a>
-</p>
+<p class="title">Product Engineer | Automation & Product Operations</p>
+<p class="contact">+91 8987725306 &nbsp;|&nbsp; <a href="mailto:satyamgupta1312@gmail.com">satyamgupta1312@gmail.com</a> &nbsp;|&nbsp; <a href="https://www.linkedin.com/in/satyam-gupta-a0737a1a5/">linkedin.com/in/satyam-gupta</a> &nbsp;|&nbsp; <a href="https://satyamgupta-portfolio.vercel.app">satyamgupta-portfolio.vercel.app</a> &nbsp;|&nbsp; <a href="https://github.com/satyamgupta1312">github.com/satyamgupta1312</a></p>
+<hr class="divider">
 
-<hr>
-
-<h2>Professional Summary</h2>
-<p style="font-size:10.5pt;color:#333;margin-bottom:8px">Product Engineer with 4+ years at The Fleets Labs (Apna Mart). Built full-stack products, automated workflows, and led teams — rapidly promoted through 6+ roles. Skilled in Python, TypeScript, React, SQL, and AI-assisted development.</p>
-
-<h2>Technical Skills</h2>
-<div style="margin-bottom:6px"><span class="skill-cat">Development:</span> <span class="skill-val">Python, TypeScript, JavaScript, Kotlin, SQL, React, NestJS, Express, FastAPI, Flask, Apps Script</span></div>
-<div style="margin-bottom:6px"><span class="skill-cat">Tools & Infra:</span> <span class="skill-val">Docker, Supabase, PostgreSQL, Redis, Tailwind CSS, Figma, Vercel, Git</span></div>
-<div style="margin-bottom:6px"><span class="skill-cat">Data & Analytics:</span> <span class="skill-val">SQL, MS Excel (Advanced), Mixpanel, API Integration</span></div>
-<div style="margin-bottom:6px"><span class="skill-cat">AI & Other:</span> <span class="skill-val">ChatGPT, Claude, AI-Assisted Development, Prompt Engineering, UAT, QA</span></div>
-<div style="margin-bottom:12px"><span class="skill-cat">Languages:</span> <span class="skill-val">English, Hindi</span></div>
-
-<h2>Projects</h2>
-<p class="note">Code is AI-assisted — logic, product thinking, architecture, and user flows are entirely mine.</p>
-
-<div class="project"><span class="project-title">Optimus — Widget CMS for App Homepage</span> <span class="date">(Apna Mart)</span><br><span class="project-desc">WYSIWYG drag-and-drop CMS for consumer app homepage. Config-driven widget system (Product Rails, Banners, Mastheads) with phone emulator preview, Maker-Checker approval workflow, undo/redo, version history, PROD/UAT support.</span><br><span class="project-tech">React 19, Express, Supabase, @dnd-kit, Tailwind CSS, Vercel</span></div>
-
-<div class="project"><span class="project-title">istrE3 — On-Demand Ironing Service</span> <span class="date">(Apna Mart — New Business Model)</span><br><span class="project-desc">Full-stack platform with 20+ state order machine, QR bag scanning, rider assignment, hub zones, real-time WebSocket tracking, OTP flows.</span><br><span class="project-tech">NestJS, React, PostgreSQL, Redis, Docker, Prisma</span></div>
-
-<div class="project"><span class="project-title">SAM — Price Benchmark (Anakin Replacement)</span> <span class="date">(Apna Mart — Saving ₹36L/year)</span><br><span class="project-desc">In-house replacement for Anakin (₹3L/month service). Scrapes 5 quick-commerce platforms, compares 3,600+ SKUs via 4-stage matching pipeline (PDP direct, brand cascade, type/MRP cascade, manual review). Multi-city orchestration, API interception, styled Excel exports.</span><br><span class="project-tech">Python, FastAPI, Playwright, React, SSE, openpyxl</span></div>
-
-<div class="project"><span class="project-title">TrackMate + Admin Dashboard</span><br><span class="project-desc">Real-time GPS tracking Android app with background service + web admin panel with Leaflet maps, geofence zones, route history.</span><br><span class="project-tech">Kotlin, Jetpack Compose, React 19, Leaflet, Supabase</span></div>
-
-<div class="project"><span class="project-title">Geofence Bot — Slack Automation</span> <span class="date">(Apna Mart)</span><br><span class="project-desc">Slack bot for automated geofence updates. Parses WKT geometry, approval workflow with map screenshots, deploys to ApnaMart API.</span><br><span class="project-tech">Python, Flask, Slack SDK, Shapely</span></div>
+<h2>Summary</h2>
+<p style="font-size:9.5pt;color:#333;margin-bottom:4px">Product Engineer with 4+ years of experience in product management, process automation, and full-stack development. Rapidly promoted through 6+ roles at Apna Mart (The Fleets Labs). Expertise in building internal tools, automating workflows, data analysis, and cross-functional collaboration. Proven ability to identify user pain points, define product requirements, ship features end-to-end, and drive measurable business impact. Skilled in Agile, stakeholder management, and data-driven decision making.</p>
 
 <h2>Professional Experience</h2>
-<p class="company">The Fleets Labs Technologies Pvt. Ltd. (Apna Mart) — Rapidly promoted through 6+ roles</p>
+<p class="company-line"><strong>The Fleets Labs Technologies Pvt. Ltd. (Apna Mart)</strong> &nbsp;|&nbsp; <em>Rapidly promoted through 6+ roles</em></p>
 
-<div class="role-date"><h3>Product Engineer</h3><span class="date">Present</span></div>
-<ul><li>Building and engineering product solutions, driving technical implementation end-to-end.</li><li>Collaborating cross-functionally to design, develop, and ship product features.</li></ul>
+<div class="row"><h3>Product Engineer</h3><span class="date">Present</span></div>
+<ul>
+<li>Own end-to-end product development lifecycle — from requirement gathering and PRD creation to development, testing, and deployment.</li>
+<li>Designed and built Optimus, a drag-and-drop Widget CMS used daily by operations and marketing teams to manage the consumer app homepage, eliminating developer dependency.</li>
+<li>Architected a new business vertical (on-demand ironing service) — defined user flows, state machines, and full-stack implementation with 20+ order states.</li>
+</ul>
 
-<div class="role-date"><h3>Automation Product Manager</h3><span class="date">Sep 2025</span></div>
-<ul><li>Spearheaded automation using JavaScript (Apps Script) and Python to reduce manual tasks.</li><li>Automated data flows between spreadsheets and external APIs (CleverTap, Singular).</li><li>Built automated dashboards for product KPIs and engagement metrics.</li></ul>
+<div class="row"><h3>Automation Product Manager</h3><span class="date">Sep 2025</span></div>
+<ul>
+<li>Led automation initiatives that reduced manual operational tasks by building Python and Google Apps Script workflows.</li>
+<li>Automated marketing data pipelines between internal systems and external APIs (CleverTap, Singular), reducing manual reporting effort by 80%.</li>
+<li>Built automated dashboards for tracking product KPIs, user engagement metrics, and operational health.</li>
+<li>Developed SAM (Price Benchmark tool) saving the company ₹36 lakh/year by replacing a third-party competitor pricing service.</li>
+</ul>
 
-<div class="role-date"><h3>Product Ops</h3><span class="date">Feb 2024 – Aug 2025</span></div>
-<ul><li>Bridged support and product teams using Mixpanel for behavior analysis.</li><li>Identified bugs and feature requests, prioritizing with SQL-based data validation.</li></ul>
+<div class="row"><h3>Product Ops</h3><span class="date">Feb 2024 – Aug 2025</span></div>
+<ul>
+<li>Bridged gap between support and product teams; used Mixpanel analytics to identify user behavior trends, friction points, and feature opportunities.</li>
+<li>Prioritized 50+ bug fixes and feature requests for engineering using SQL-based data validation and user impact analysis.</li>
+<li>Optimized internal workflows resulting in 30% faster ticket resolution and smoother product launches.</li>
+</ul>
 
-<div class="role-date"><h3>Tech Support</h3><span class="date">Feb 2023 – Jan 2024</span></div>
-<ul><li>Resolved complex technical issues. Collaborated with QA for UAT.</li></ul>
+<div class="row"><h3>Tech Support</h3><span class="date">Feb 2023 – Jan 2024</span></div>
+<ul>
+<li>Resolved complex technical issues for users, maintaining high CSAT scores. Collaborated with QA team on User Acceptance Testing (UAT).</li>
+</ul>
 
-<div class="role-date"><h3>GRN & Audit Lead / SLA Manager / Trainer</h3><span class="date">Mar 2022 – Feb 2023</span></div>
-<ul><li>Led Audit Team to 100% compliance. Managed SLA for online orders. Trained staff.</li></ul>
+<div class="row"><h3>GRN & Audit Lead / SLA Manager / Trainer</h3><span class="date">Mar 2022 – Feb 2023</span></div>
+<ul>
+<li>Led Audit Team achieving 100% compliance with inventory standards. Managed SLA for online orders ensuring on-time delivery. Trained 20+ staff members.</li>
+</ul>
+
+<h2>Key Projects</h2>
+<p class="note">Code is AI-assisted — product thinking, logic, architecture, and user flows are entirely mine.</p>
+
+<div class="proj"><div class="proj-head"><span class="proj-title">Optimus — Widget CMS for Consumer App Homepage</span><span class="proj-co">Apna Mart</span></div>
+<p class="proj-desc">WYSIWYG drag-and-drop CMS with config-driven widget system, phone emulator preview, Maker-Checker approval workflow, undo/redo, version history, and multi-environment (PROD/UAT) deployment.</p>
+<p class="proj-tech">React 19 | Express | Supabase | @dnd-kit | Tailwind CSS | Vercel</p></div>
+
+<div class="proj"><div class="proj-head"><span class="proj-title">SAM — Price Benchmark (Competitor Price Tracking)</span><span class="proj-co">Apna Mart — Saving ₹36L/yr</span></div>
+<p class="proj-desc">Playwright browser automation scraping 5 quick-commerce platforms, comparing 3,600+ SKUs via 4-stage matching pipeline. Multi-city orchestration, API interception, anti-detection, styled Excel exports.</p>
+<p class="proj-tech">Python | FastAPI | Playwright | React | SSE | openpyxl</p></div>
+
+<div class="proj"><div class="proj-head"><span class="proj-title">istrE3 — On-Demand Ironing Service Platform</span><span class="proj-co">Apna Mart — New Business Model</span></div>
+<p class="proj-desc">Full-stack platform with 20+ state order machine, QR bag scanning, rider assignment, hub zone management, real-time WebSocket tracking, OTP-based pickup/delivery.</p>
+<p class="proj-tech">NestJS | React | PostgreSQL | Redis | Docker | Prisma</p></div>
+
+<div class="proj"><div class="proj-head"><span class="proj-title">TrackMate — Real-Time GPS Tracking System</span><span class="proj-co">Personal</span></div>
+<p class="proj-desc">Android app with background GPS tracking + web admin dashboard with interactive maps, geofence zone management, route history visualization.</p>
+<p class="proj-tech">Kotlin | Jetpack Compose | React 19 | Leaflet | Supabase</p></div>
+
+<div class="proj"><div class="proj-head"><span class="proj-title">Geofence Bot — Slack Workflow Automation</span><span class="proj-co">Apna Mart</span></div>
+<p class="proj-desc">Slack bot automating store geofence updates with WKT parsing, approval workflow, map verification, and API deployment.</p>
+<p class="proj-tech">Python | Flask | Slack SDK | Shapely</p></div>
+
+<h2>Technical Skills</h2>
+<div class="skills-grid">
+<span class="sk-label">Languages:</span><span class="sk-value">Python, TypeScript, JavaScript, Kotlin, SQL, HTML/CSS</span>
+<span class="sk-label">Frameworks:</span><span class="sk-value">React, NestJS, Express, FastAPI, Flask, Jetpack Compose, Tailwind CSS</span>
+<span class="sk-label">Tools & Infra:</span><span class="sk-value">Docker, Git, Vercel, Supabase, PostgreSQL, Redis, Playwright, Figma</span>
+<span class="sk-label">Data & Analytics:</span><span class="sk-value">SQL, MS Excel (Advanced), Mixpanel, API Integration, Pydantic</span>
+<span class="sk-label">Product Skills:</span><span class="sk-value">PRD, User Stories, Wireframing, A/B Testing, Agile/Scrum, JIRA, Stakeholder Management</span>
+<span class="sk-label">AI & Prompting:</span><span class="sk-value">ChatGPT, Claude, AI-Assisted Development, Prompt Engineering</span>
+<span class="sk-label">QA:</span><span class="sk-value">User Acceptance Testing (UAT), Software Quality Assurance, Bug Triage</span>
+</div>
 
 <h2>Education</h2>
-<div class="edu-row"><span><strong>Bachelor of Commerce</strong> — IGNOU</span><span>Pursuing</span></div>
+<div class="edu-row"><span><strong>Bachelor of Commerce</strong> — Indira Gandhi National Open University (IGNOU)</span><span>Pursuing</span></div>
 <div class="edu-row"><span><strong>Intermediate (12th)</strong> — Gossner College, Ranchi</span><span>2020</span></div>
 <div class="edu-row"><span><strong>Matriculation (10th)</strong> — International Public School</span><span>2018</span></div>
 
+<h2>Interests</h2>
+<p class="interests">Data Automation & Scripting, Product Strategy, AI Tools, Strategy Gaming, Music</p>
+
 </body></html>`;
 
-    const printWindow = window.open('', '_blank');
-    printWindow.document.write(cvHTML);
-    printWindow.document.close();
-    printWindow.onload = () => {
-        printWindow.print();
-    };
+    const blob = new Blob([cvHTML], { type: 'text/html' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'Satyam_Gupta_Resume.html';
+    a.click();
+    URL.revokeObjectURL(url);
+
+    // Also open for print-to-PDF
+    setTimeout(() => {
+        const printWin = window.open('', '_blank');
+        printWin.document.write(cvHTML);
+        printWin.document.close();
+    }, 500);
+}
+
+document.getElementById('downloadCV').addEventListener('click', (e) => {
+    e.preventDefault();
+    generateCV();
+});
+
+document.getElementById('downloadCVMain').addEventListener('click', (e) => {
+    e.preventDefault();
+    generateCV();
 });

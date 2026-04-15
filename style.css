@@ -6,8 +6,8 @@
     --bg-card: rgba(255, 255, 255, 0.03);
     --bg-card-hover: rgba(255, 255, 255, 0.06);
     --text-primary: #f0f0f5;
-    --text-secondary: #8888a0;
-    --text-muted: #55556a;
+    --text-secondary: #b0b0c8;
+    --text-muted: #7a7a95;
     --accent: #7c5cfc;
     --accent-2: #c084fc;
     --accent-3: #38bdf8;
@@ -1422,6 +1422,12 @@ button { cursor: none; }
 
 .contact-link i {
     font-size: 1.1rem;
+}
+
+.cv-download-btn {
+    margin-top: 36px;
+    font-size: 1rem;
+    padding: 18px 44px;
 }
 
 /* ===== Footer ===== */
