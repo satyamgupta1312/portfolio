@@ -195,7 +195,7 @@ window.addEventListener('scroll', () => {
 
 // ===== CV Download =====
 function generateCV() {
-    window.open('resume.html', '_blank');
+    window.open('Satyam_Gupta_Resume.pdf', '_blank');
 }
 
 document.getElementById('downloadCV').addEventListener('click', function(e) {
